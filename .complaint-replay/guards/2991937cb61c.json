@@ -1,0 +1,39 @@
+{
+  "case": "2991937cb61c",
+  "complaint": "I'm blind and use a screen reader. In the store the product pictures are not described at all, I can't tell what they show.\nPage: /store.",
+  "condition": {
+    "key": "twin",
+    "label": "Twin of the reporter",
+    "persona": "The real user who reported this: 1280x800 screen, language en-US, timezone Asia/Kolkata, 4g network (+100 ms per request); the user says they uses a screen reader.",
+    "context": {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "en-US",
+      "is_mobile": false,
+      "has_touch": false,
+      "device_scale_factor": 1,
+      "timezone_id": "Asia/Kolkata"
+    },
+    "network": {
+      "latency": 100
+    },
+    "cpu_slowdown": 1,
+    "zoom": 1.0,
+    "screen_reader": true,
+    "keyboard_only": false,
+    "max_steps": 20
+  },
+  "must_not_see": [
+    "a11y_violation: image-alt: Images must have alternative text (img[src$=\"book.jpg\"], img[src$=\"computer.jpg\"], img[src$=\"banana.jpg\"])"
+  ],
+  "steps": [
+    {
+      "role": "link",
+      "name": "Store",
+      "do": "click_role",
+      "idx": 1
+    }
+  ]
+}
