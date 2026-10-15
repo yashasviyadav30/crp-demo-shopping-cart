@@ -1,0 +1,37 @@
+{
+  "case": "016903d104da",
+  "complaint": "With my screen reader the buttons next to the book only say plus and minus. I can't tell what they change.",
+  "condition": {
+    "key": "screen_reader",
+    "label": "Screen-reader user",
+    "persona": "A blind user with a screen reader. Only controls with an accessible name can be used.",
+    "context": {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    "network": null,
+    "cpu_slowdown": 1,
+    "zoom": 1.0,
+    "screen_reader": true,
+    "keyboard_only": false,
+    "max_steps": 20
+  },
+  "must_not_see": [
+    "unclear_name: a button (near 'Book $#') is announced only as '+', which does not say what it does",
+    "unclear_name: a button (near 'Book $#') is announced only as '-', which does not say what it does"
+  ],
+  "steps": [
+    {
+      "do": "goto",
+      "path": "/store"
+    },
+    {
+      "role": "button",
+      "name": "+ Add To Cart",
+      "do": "click_role",
+      "idx": 3
+    }
+  ]
+}
