@@ -24,6 +24,7 @@ export function Navbar() {
             style={{ width: "3rem", height: "3rem", position: "relative" }}
             variant="outline-primary"
             className="rounded-circle"
+            aria-label={`Cart (${cartQuantity} items)`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

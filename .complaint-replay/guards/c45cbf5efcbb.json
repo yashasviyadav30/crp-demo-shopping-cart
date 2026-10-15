@@ -1,0 +1,73 @@
+{
+  "case": "c45cbf5efcbb",
+  "complaint": "मैं स्क्रीन रीडर से फ़ोन चलाता हूँ। किताब कार्ट में डालने के बाद ऊपर वाला कार्ट का बटन सिर्फ 'एक' बोलता है, समझ नहीं आता कि वो कार्ट है\nPage: /store.",
+  "condition": {
+    "key": "twin",
+    "label": "1280x800 screen, language hi-IN",
+    "persona": "The real user who reported this: 1280x800 screen, language hi-IN, timezone Asia/Kolkata, 4g network (+120 ms per request); the user says they use a screen reader.",
+    "context": {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "locale": "hi-IN",
+      "is_mobile": false,
+      "has_touch": false,
+      "device_scale_factor": 1,
+      "timezone_id": "Asia/Kolkata"
+    },
+    "network": {
+      "latency": 120
+    },
+    "cpu_slowdown": 1,
+    "zoom": 1.0,
+    "screen_reader": true,
+    "keyboard_only": false,
+    "max_steps": 20
+  },
+  "must_not_see": [
+    "unclear_name: a button (in the navigation, near 'Store') is announced only as '#', which does not say what it does",
+    "unclear_name: a button (near 'Book $#') is announced only as '+', which does not say what it does",
+    "unclear_name: a button (near 'Book $#') is announced only as '-', which does not say what it does"
+  ],
+  "steps": [
+    {
+      "do": "goto",
+      "path": "/store"
+    },
+    {
+      "do": "goto",
+      "path": "/store"
+    },
+    {
+      "do": "goto",
+      "path": "/store"
+    },
+    {
+      "do": "wait",
+      "ms": 5000
+    },
+    {
+      "do": "wait",
+      "ms": 5000
+    },
+    {
+      "do": "wait",
+      "ms": 5000
+    },
+    {
+      "do": "wait",
+      "ms": 5000
+    },
+    {
+      "do": "wait",
+      "ms": 5000
+    },
+    {
+      "role": "button",
+      "name": "+ Add To Cart",
+      "do": "click_role",
+      "idx": 3
+    }
+  ]
+}
