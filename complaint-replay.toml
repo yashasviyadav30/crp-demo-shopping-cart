@@ -1,0 +1,5 @@
+[app]
+start = "npx vite --port {port} --strictPort --host 127.0.0.1"
+ready = "/"
+hints = "The store is at /store. Products: Book, Computer, Banana, Car. The cart button appears in the top bar once something is in the cart."
+edit = ["src/**"]
