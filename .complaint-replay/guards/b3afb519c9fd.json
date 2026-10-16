@@ -1,0 +1,40 @@
+{
+  "case": "b3afb519c9fd",
+  "complaint": "Can't tell what the minus and plus buttons do\nI'm blind and use NVDA. After I add a book to the cart, the two buttons next to it are only read as 'minus' and 'plus'. I don't know what they change.",
+  "condition": {
+    "key": "screen_reader",
+    "label": "Screen-reader user",
+    "persona": "A blind user with a screen reader. Only controls with an accessible name can be used.",
+    "context": {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    "network": null,
+    "cpu_slowdown": 1,
+    "zoom": 1.0,
+    "screen_reader": true,
+    "keyboard_only": false,
+    "max_steps": 20,
+    "audit": false
+  },
+  "must_not_see": [
+    "unclear_name: a button (near 'Book $#') is announced only as '+', which does not say what it does",
+    "unclear_name: a button (near 'Book $#') is announced only as '-', which does not say what it does"
+  ],
+  "steps": [
+    {
+      "role": "link",
+      "name": "Store",
+      "do": "click_role",
+      "idx": 1
+    },
+    {
+      "role": "button",
+      "name": "+ Add To Cart",
+      "do": "click_role",
+      "idx": 3
+    }
+  ]
+}
