@@ -20,11 +20,12 @@ export function Navbar() {
         </Nav>
         {cartQuantity > 0 && (
           <Button
-            onClick={openCart}
-            style={{ width: "3rem", height: "3rem", position: "relative" }}
-            variant="outline-primary"
-            className="rounded-circle"
-          >
+       onClick={openCart}
+       aria-label={`Cart with ${cartQuantity} ${cartQuantity === 1 ? 'item' : 'items'}`}
+       style={{ width: "3rem", height: "3rem", position: "relative" }}
+       variant="outline-primary"
+       className="rounded-circle"
+     >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 576 512"

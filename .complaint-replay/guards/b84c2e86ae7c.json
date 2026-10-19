@@ -1,0 +1,39 @@
+{
+  "case": "b84c2e86ae7c",
+  "complaint": "I added items but the cart button only says a number, I cannot tell what it is",
+  "condition": {
+    "key": "screen_reader",
+    "label": "Screen-reader user",
+    "persona": "A blind user with a screen reader. Only controls with an accessible name can be used.",
+    "context": {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      }
+    },
+    "network": null,
+    "cpu_slowdown": 1,
+    "zoom": 1.0,
+    "screen_reader": true,
+    "keyboard_only": false,
+    "max_steps": 20,
+    "audit": false
+  },
+  "must_not_see": [
+    "unclear_name: a button (in the navigation, near 'Store') is announced only as '#', which does not say what it does"
+  ],
+  "steps": [
+    {
+      "role": "link",
+      "name": "Store",
+      "do": "click_role",
+      "idx": 1
+    },
+    {
+      "role": "button",
+      "name": "+ Add To Cart",
+      "do": "click_role",
+      "idx": 3
+    }
+  ]
+}
